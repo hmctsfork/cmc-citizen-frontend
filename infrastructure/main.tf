@@ -172,12 +172,6 @@ module "citizen-frontend" {
     FEATURE_INVERSION_OF_CONTROL = "${var.feature_inversionOfControl}"
 
     CONTACT_EMAIL = "${data.azurerm_key_vault_secret.staff_email.value}"
-    WEBCHAT_CHAT_ID = "${data.azurerm_key_vault_secret.cmc_webchat_id.value}"
-    WEBCHAT_TENANT = "${data.azurerm_key_vault_secret.cmc_webchat_tenant.value}"
-    WEBCHAT_BUTTON_NO_AGENTS = "${data.azurerm_key_vault_secret.cmc_webchat_button_no_agents.value}"
-    WEBCHAT_BUTTON_AGENTS_BUSY = "${data.azurerm_key_vault_secret.cmc_webchat_button_busy.value}"
-    WEBCHAT_BUTTON_SERVICE_CLOSED = "${data.azurerm_key_vault_secret.cmc_webchat_button_service_closed.value}"
-
   }
 }
 
