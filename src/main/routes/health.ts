@@ -13,8 +13,8 @@ let healthCheckConfig = {
   checks: {
     'claimstore': basicHealthCheck('claim-store'),
     'draft-store': basicHealthCheck('draft-store'),
-    'fees': basicHealthCheck('fees'),
-    'pay': basicHealthCheck('pay'),
+/*    'fees': basicHealthCheck('fees'),
+    'pay': basicHealthCheck('pay'),*/
     'idam-service-2-service-auth': basicHealthCheck('idam.service-2-service-auth'),
     'idam-api': basicHealthCheck('idam.api')
   }
