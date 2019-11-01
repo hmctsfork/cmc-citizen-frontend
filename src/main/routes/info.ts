@@ -13,8 +13,7 @@ export default express.Router()
     info: {
       'claimstore': basicInfoContributor('claim-store'),
       'draft-store': basicInfoContributor('draft-store'),
-/*      'fees': basicInfoContributor('fees'),
-      'pay': basicInfoContributor('pay'),*/
+      'fees': basicInfoContributor('fees'), /*'pay': basicInfoContributor('pay'),*/
       'idam-service-2-service-auth': basicInfoContributor('idam.service-2-service-auth'),
       'idam-api': basicInfoContributor('idam.api'),
       'idam-authentication-web': caCertRequiredLocallyInfoContributor('idam.authentication-web')
