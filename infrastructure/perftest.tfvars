@@ -7,4 +7,8 @@ feature_mock_pay =  "true"
 log_level = "DEBUG"
 node_debug = "child_process,cluster"
 
-feature_testing_support = "true"  # add for troubleshooting!!!
+# add for troubleshooting!!!
+
+feature_admissions = "true"
+feature_new_features_consent = "true"
+feature_testing_support = "true"

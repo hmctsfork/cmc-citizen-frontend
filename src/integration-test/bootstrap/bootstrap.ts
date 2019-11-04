@@ -72,9 +72,13 @@ async function waitTillHealthy (appURL: string) {
 
 async function createSmokeTestsUserIfDoesntExist (username: string, userGroup: string, password: string): Promise<void> {
   let bearerToken
+  console.log(username)
+  console.log(password)
+  console.log(userGroup)
   try {
     bearerToken = await IdamClient.authenticateUser(username, password)
   } catch {
+    console.log(`user authentication not successful`)
     if (!(username || password)) {
       return
     }
