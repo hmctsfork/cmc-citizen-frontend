@@ -5,7 +5,8 @@ fees_api_url = "http://fees-register-api-perftest.service.core-compute-perftest.
 payments_api_url = "http://payment-api-perftest.service.core-compute-perftest.internal"
 capacity = "2"
 
-# add for troubleshooting!!!
+
 feature_admissions = "true"
 feature_new_features_consent = "true"
 feature_testing_support = "true"
+feature_directions_questionnaire = "true"
