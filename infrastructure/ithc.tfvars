@@ -8,7 +8,6 @@ feature_return_error_to_user = "false"
 feature_paid_in_full =  "true"
 feature_admissions = "true"
 feature_new_features_consent = "true"
+feature_inversionOfControl = "true"
 website_local_cache_sizeinmb = "0"
 node_debug = "child_process,cluster"
-
-feature_testing_support = "true"  # remove before ithc!!!
