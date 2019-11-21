@@ -4,8 +4,6 @@ authentication_web_url = "https://idam-web-public.perftest.platform.hmcts.net"
 fees_api_url = "http://fees-register-api-perftest.service.core-compute-perftest.internal"
 payments_api_url = "http://payment-api-perftest.service.core-compute-perftest.internal"
 capacity = "2"
-
-
 feature_admissions = "true"
 feature_new_features_consent = "true"
 feature_testing_support = "true"
