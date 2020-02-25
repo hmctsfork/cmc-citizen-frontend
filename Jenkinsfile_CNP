@@ -40,7 +40,7 @@ static LinkedHashMap<String, Object> secret(String secretName, String envVar) {
 // Vars needed for AKS testing - keep values in sync with: charts/cmc-citizen-frontend/...
 // THESE WILL BE OVERWRITTEN IN ASE DEPLOYMENTS WITH TERRAFORM OUTPUTS.TF
 // THESE CAN BE PICKED UP IN INTEGRATION-TEST CODE DIRECTLY
-env.IDAM_URL = 'https://idam-api.ithc.platform.hmcts.net'
+env.IDAM_URL = 'http://idam-api-ithc.service.core-compute-ithc.internal'
 env.CLAIM_STORE_URL = 'http://cmc-claim-store-ithc.service.core-compute-ithc.internal'
 env.FEATURE_ADMISSIONS = 'true'
 env.FEATURE_MEDIATION = 'true'
