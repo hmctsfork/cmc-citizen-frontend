@@ -6,9 +6,9 @@ import * as config from 'config'
 import * as nunjucks from 'nunjucks'
 import {
   addDaysFilter,
-  dateWithDayAtFrontFilter,
   dateFilter,
   dateInputFilter,
+  dateWithDayAtFrontFilter,
   monthIncrementFilter
 } from 'modules/nunjucks/filters/dateFilter'
 import { convertToPoundsFilter } from 'modules/nunjucks/filters/convertToPounds'
@@ -70,6 +70,7 @@ import { IncomeExpenseSchedule } from 'common/calculate-monthly-income-expense/i
 import { FreeMediationOption } from 'main/app/forms/models/freeMediation'
 import { PaymentOption } from 'claims/models/paymentOption'
 import { ResponseType as DomainResponseType } from 'claims/models/response/responseType'
+import { FeaturesBuilder } from 'claim/helpers/featuresBuilder'
 
 const packageDotJson = require('../../../../package.json')
 
@@ -200,6 +201,10 @@ export class Nunjucks {
     })
     nunjucksEnv.addGlobal('PaymentOption', PaymentOption)
     nunjucksEnv.addGlobal('SignatureType', SignatureType)
+    nunjucksEnv.addGlobal('FeaturesBuilder', FeaturesBuilder)
+    nunjucksEnv.addGlobal('toDate', function (date) {
+      return date ? new Date(date) : new Date()
+    })
   }
 
   private convertPropertiesToBoolean (featureToggles: { [key: string]: any }): { [key: string]: boolean } {
