@@ -18,6 +18,7 @@ locals {
   nonPreviewVaultName = "${var.raw_product}-${var.env}"
   vaultName = "${(var.env == "preview" || var.env == "spreview") ? local.previewVaultName : local.nonPreviewVaultName}"
 
+  s2sUrl = "http://rpe-service-auth-provider-${local.local_env}.service.${local.local_ase}.internal"
   claimStoreUrl = "http://cmc-claim-store-${local.local_env}.service.${local.local_ase}.internal"
   featureTogglesApiUrl = "http://rpe-feature-toggle-api-${local.local_env}.service.${local.local_ase}.internal"
   draftStoreUrl = "http://draft-store-service-${local.local_env}.service.${local.local_ase}.internal"
@@ -107,9 +108,6 @@ module "citizen-frontend" {
   asp_rg = "${local.asp_name}"
   instance_size = "${local.sku_size}"
   website_local_cache_sizeinmb = "${var.website_local_cache_sizeinmb}"
-  app_settings           = {
-    WEBSITE_NODE_DEFAULT_VERSION = "10.15.2"
-  }
 
   app_settings = {
     // Node specific vars
@@ -135,7 +133,7 @@ module "citizen-frontend" {
     // IDAM
     IDAM_API_URL = "${var.idam_api_url}"
     IDAM_AUTHENTICATION_WEB_URL = "${var.authentication_web_url}"
-    IDAM_S2S_AUTH = "${var.s2s_url}"
+    IDAM_S2S_AUTH = "${local.s2sUrl}"
     IDAM_S2S_TOTP_SECRET = "${data.azurerm_key_vault_secret.s2s_secret.value}"
     OAUTH_CLIENT_SECRET = "${data.azurerm_key_vault_secret.oauth_client_secret.value}"
 
