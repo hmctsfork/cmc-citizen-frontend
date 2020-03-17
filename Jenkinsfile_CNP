@@ -67,15 +67,15 @@ withPipeline("nodejs", product, component) {
 //    }
 //  }
 
-  after('build') {
-    //yarnBuilder.yarn('setup')
-  }
+//  after('build') {
+//    yarnBuilder.yarn('setup')
+//  }
 
-  after('test') {
-    onMaster {
-     //yarnBuilder.yarn('tests:a11y')
-    }
-  }
+//  after('test') {
+//    onMaster {
+//     yarnBuilder.yarn('tests:a11y')
+//    }
+//  }
 
   loadVaultSecrets(secrets)
   enableSlackNotifications(notificationsChannel)
