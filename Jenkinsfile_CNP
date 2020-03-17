@@ -66,6 +66,5 @@ withPipeline("nodejs", product, component) {
 
   loadVaultSecrets(secrets)
   enableSlackNotifications(notificationsChannel)
-  enableDockerBuild()
   installCharts()
 }
