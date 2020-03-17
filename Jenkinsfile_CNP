@@ -68,12 +68,12 @@ withPipeline("nodejs", product, component) {
 //  }
 
   after('build') {
-    yarnBuilder.yarn('setup')
+    //yarnBuilder.yarn('setup')
   }
 
   after('test') {
     onMaster {
-      yarnBuilder.yarn('tests:a11y')
+     //yarnBuilder.yarn('tests:a11y')
     }
   }
 
