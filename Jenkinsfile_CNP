@@ -68,7 +68,7 @@ withPipeline("nodejs", product, component) {
 //  }
 
   after('build') {
-    yarnBuilder.yarn('setup')
+    //yarnBuilder.yarn('setup')
   }
 
 //  after('test') {
