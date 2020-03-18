@@ -67,9 +67,9 @@ withPipeline("nodejs", product, component) {
 //    }
 //  }
 
-//  after('build') {
-//    yarnBuilder.yarn('setup')
-//  }
+  after('build') {
+    yarnBuilder.yarn('setup')
+  }
 
 //  after('test') {
 //    onMaster {
